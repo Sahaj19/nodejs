@@ -1,0 +1,26 @@
+[SCENERIO - 1]
+
+https://www.youtube.com/results?search_query=nodejs
+
+search box input value: nodejs
+Protocol: https
+Domain Name: www.youtube.com
+Path: /results
+Query Parameter: ?search_query=nodejs
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[SCENERIO - 2]
+
+https://www.youtube.com/results?search_query=nodejs+javascript+html+css
+
+search box input value: nodejs javascript html css
+Protocol: https
+Domain Name: www.youtube.com
+Path: /results
+Query Parameter: ?search_query=nodejs+javascript+html+css
+
+
+
+
+
