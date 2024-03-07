@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "first_name": "sahaj",
+    "last_name": "arora",
+    "email": "sahaj@gmail.com",
+    "gender": "male",
+    "job_title": "MERN stack developer"
+  },
+  {
+    "id": 2,
+    "first_name": "sahaj",
+    "last_name": "arora",
+    "email": "sahaj@gmail.com",
+    "gender": "male",
+    "job_title": "web developer"
+  },
+  {
+    "id": 3,
+    "first_name": "Jehu",
+    "last_name": "Cartner",
+    "email": "jcartner2@over-blog.com",
+    "gender": "Male",
+    "job_title": "Recruiting Manager"
+  },
+  {
+    "id": 4,
+    "first_name": "Bendicty",
+    "last_name": "Treacy",
+    "email": "btreacy3@simplemachines.org",
+    "gender": "Male",
+    "job_title": "Chemical Engineer"
+  },
+  {
+    "id": 5,
+    "first_name": "Grady",
+    "last_name": "O'Grady",
+    "email": "gogrady4@joomla.org",
+    "gender": "Male",
+    "job_title": "Actuary"
+  },
+  {
+    "id": 6,
+    "first_name": "Nicolis",
+    "last_name": "Ney",
+    "email": "nney5@wordpress.org",
+    "gender": "Male",
+    "job_title": "Database Administrator I"
+  },
+  {
+    "id": 7,
+    "first_name": "Denise",
+    "last_name": "Cattlow",
+    "email": "dcattlow6@istockphoto.com",
+    "gender": "Female",
+    "job_title": "Staff Scientist"
+  },
+  {
+    "id": 8,
+    "first_name": "Caroljean",
+    "last_name": "Parlor",
+    "email": "cparlor7@marriott.com",
+    "gender": "Female",
+    "job_title": "Civil Engineer"
+  },
+  {
+    "id": 9,
+    "first_name": "Malachi",
+    "last_name": "Scain",
+    "email": "mscain8@unesco.org",
+    "gender": "Genderqueer",
+    "job_title": "Senior Developer"
+  },
+  {
+    "id": 10,
+    "first_name": "Gan",
+    "last_name": "Mantram",
+    "email": "gmantram9@rakuten.co.jp",
+    "gender": "Male",
+    "job_title": "Graphic Designer"
+  }
+]
