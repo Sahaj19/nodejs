@@ -1,0 +1,15 @@
+{
+  "name": "mongoose-with-express",
+  "version": "1.0.0",
+  "description": "connecting mongodb with nodejs | mongoose + express",
+  "main": "index.js",
+  "scripts": {
+    "start" : "nodemon index.js"
+  },
+  "author": "sahajarora",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "mongoose": "^8.2.1"
+  }
+}
