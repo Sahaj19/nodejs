@@ -1,0 +1,40 @@
+.new_form {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.single_user_field {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.single_user_field label {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.single_user_field input {
+    padding: 1rem 0.5rem;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+.new_form button {
+    font-size: 1.5rem;
+    background-color: steelblue;
+    color: #000;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.back_btn {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    font-size: 2rem;
+    color: #000;
+}

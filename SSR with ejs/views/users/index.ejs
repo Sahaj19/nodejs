@@ -1,0 +1,15 @@
+<% layout("layouts/boilerplate.ejs") %>
+
+<!------------------------------------------------------------------->
+<h1>All users will be listed here</h1>
+
+<% all_users.forEach((user) => { %>
+<div class="user_info_div">
+  <h2><strong>Name : </strong><%= user.name %></h2>
+  <h2><strong>Gender : </strong><%= user.gender %></h2>
+  <h2><strong>Age : </strong><%= user.age %></h2>
+</div>
+<% }) %>
+
+<!------------------------------------------------------------------->
+<a href="/users/new" class="new_user_btn">Create new user</a>

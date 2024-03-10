@@ -1,0 +1,44 @@
+<% layout("layouts/boilerplate.ejs") %>
+
+<!------------------------------------------------------------------->
+<h1>Create new user</h1>
+
+<form action="/users" method="post" class="new_form">
+  <div class="single_user_field">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      autocomplete="off"
+      placeholder="enter your name"
+      required
+    />
+  </div>
+  <div class="single_user_field">
+    <label for="age">Age</label>
+    <input
+      type="number"
+      id="age"
+      name="age"
+      autocomplete="off"
+      placeholder="enter your age"
+      required
+    />
+  </div>
+  <div class="single_user_field">
+    <label for="gender">Gender</label>
+    <input
+      type="text"
+      id="gender"
+      name="gender"
+      autocomplete="off"
+      placeholder="enter your gender"
+      required
+    />
+  </div>
+  <button type="submit">Create user</button>
+</form>
+
+<!------------------------------------------------------------------->
+<a href="/users" class="back_btn">Back to users</a>
