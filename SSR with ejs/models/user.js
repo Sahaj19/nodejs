@@ -23,6 +23,7 @@ const userSchema = new Schema(
     gender: {
       type: String,
       trim: true,
+      lowercase: true,
       enum: {
         values: ["male", "female", "other"],
         message: "Gender must be either 'male', 'female', or 'other'",

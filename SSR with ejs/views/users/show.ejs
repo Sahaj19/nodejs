@@ -1,0 +1,21 @@
+<% layout("layouts/boilerplate.ejs") %>
+
+<!------------------------------------------------------------------->
+<h1>Your particular user in detail</h1>
+
+<div class="user_info_div">
+  <h2><strong>Name : </strong><%= required_user.name %></h2>
+  <h2><strong>Gender : </strong><%= required_user.gender %></h2>
+  <h2><strong>Age : </strong><%= required_user.age %></h2>
+  <div class="btns">
+    <form action="/users/<%= required_user._id %>/edit" method="get">
+      <button type="submit">Edit user</button>
+    </form>
+    <form action="/users/<%= required_user._id %>?_method=DELETE" method="post">
+      <button type="submit" class="delete_btn">Delete user</button>
+    </form>
+  </div>
+</div>
+
+<!------------------------------------------------------------------->
+<a href="/users" class="back_btn">Back to users</a>

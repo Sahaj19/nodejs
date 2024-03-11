@@ -8,6 +8,17 @@
   <h2><strong>Name : </strong><%= user.name %></h2>
   <h2><strong>Gender : </strong><%= user.gender %></h2>
   <h2><strong>Age : </strong><%= user.age %></h2>
+  <div class="btns">
+    <form action="/users/<%= user._id %>" method="get">
+      <button type="submit">Show user</button>
+    </form>
+    <form action="/users/<%= user._id %>/edit" method="get">
+      <button type="submit">Edit user</button>
+    </form>
+    <form action="/users/<%= user._id %>?_method=DELETE" method="post">
+      <button type="submit" class="delete_btn">Delete user</button>
+    </form>
+  </div>
 </div>
 <% }) %>
 

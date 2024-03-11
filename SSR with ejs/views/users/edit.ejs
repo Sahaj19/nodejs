@@ -1,18 +1,21 @@
 <% layout("layouts/boilerplate.ejs") %>
 
 <!------------------------------------------------------------------->
-<h1>Create new user</h1>
+<h1>Edit your user</h1>
 
-<form action="/users" method="post" class="new_form">
+<form
+  action="/users/<%= required_user._id %>?_method=PATCH"
+  method="post"
+  class="new_form"
+>
   <div class="single_user_field">
     <label for="name">Name</label>
     <input
       type="text"
       id="name"
       name="name"
+      value="<%= required_user.name %>"
       autocomplete="off"
-      autofocus
-      placeholder="enter your name"
       required
     />
   </div>
@@ -22,8 +25,8 @@
       type="number"
       id="age"
       name="age"
+      value="<%= required_user.age %>"
       autocomplete="off"
-      placeholder="enter your age"
       required
     />
   </div>
@@ -33,12 +36,12 @@
       type="text"
       id="gender"
       name="gender"
+      value="<%= required_user.gender %>"
       autocomplete="off"
-      placeholder="enter your gender"
       required
     />
   </div>
-  <button type="submit">Create user</button>
+  <button type="submit">Update user</button>
 </form>
 
 <!------------------------------------------------------------------->
