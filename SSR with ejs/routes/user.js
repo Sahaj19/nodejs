@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router({ mergeParams: true });
+const wrapAsync = require("../utils/wrapasync.js");
 const {
   indexRoute,
   newUserRoute,
@@ -19,22 +20,22 @@ router.get("/", indexRoute);
 router.get("/new", newUserRoute);
 
 //(post route)
-router.post("/", createUserRoute);
+router.post("/", wrapAsync(createUserRoute));
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //(show route)
-router.get("/:id", showUserRoute);
+router.get("/:id", wrapAsync(showUserRoute));
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //(edit route)
-router.get("/:id/edit", editUserRoute);
+router.get("/:id/edit", wrapAsync(editUserRoute));
 
 //(update route)
-router.patch("/:id", updateUserRoute);
+router.patch("/:id", wrapAsync(updateUserRoute));
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //(delete route)
-router.delete("/:id", deleteUserRoute);
+router.delete("/:id", wrapAsync(deleteUserRoute));
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 module.exports = router;
