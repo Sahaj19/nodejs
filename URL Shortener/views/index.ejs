@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>url-shortener</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <script src="/js/delBtn.js" defer></script>
+  </head>
+  <body>
+    <h1>url-shortener</h1>
+
+    <!-- form -->
+    <form action="/urls/shorturl" method="post" class="main_form">
+      <input type="url" name="formUrl" autofocus required />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- urls -->
+    <% all_urls.forEach((url) => { %>
+    <div class="url_info">
+      <h3>
+        <strong>Original URL : </strong
+        ><a href="<%= url.originalUrl %>" target="_blank"
+          ><%= url.originalUrl %></a
+        >
+      </h3>
+      <h3>
+        <strong>Short URL : </strong
+        ><a href="/urls/<%= url.shortUrl %>" target="_blank"
+          ><%= url.shortUrl %></a
+        >
+      </h3>
+      <h3><strong>Clicks : </strong><%= url.clicks %></h3>
+
+      <!-- delete btn -->
+      <form action="/urls/<%= url._id %>?_method=DELETE" method="post">
+        <button type="submit" class="delete_btn">Delete</button>
+      </form>
+    </div>
+    <% }) %>
+  </body>
+</html>
