@@ -1,0 +1,14 @@
+{
+  "name": "jwt-authentication",
+  "version": "1.0.0",
+  "description": "jsonwebtoken authentication & authorization",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "sahajarora",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
