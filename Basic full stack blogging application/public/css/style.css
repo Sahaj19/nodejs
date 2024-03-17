@@ -22,4 +22,48 @@ nav a {
     font-size: 1.5rem;
 }
 
-/*************************** Home Page ***************************/
+/************************ signup/login form ************************/
+.signup_login_form {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.signup_login_form .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.signup_login_form .field label {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.signup_login_form .field input {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.signup_login_form button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: #000;
+    background-color: grey;
+    border: none;
+    font-weight: bold;
+}
+
+
+/************************ Mongoose Errors ************************/
+.errors {
+    box-shadow: 0 0 2px 2px #000;
+    padding: 1rem;
+    margin: 4rem auto;
+    max-width: 800px;
+}
+
+.errors p {
+    margin: 1rem;
+    font-size: 1.5rem;
+}

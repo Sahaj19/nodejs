@@ -2,7 +2,22 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const ejsMate = require("ejs-mate");
+const mongoose = require("mongoose");
+const userRouter = require("./routes/user.js");
 const port = 3000;
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+async function main() {
+  try {
+    await mongoose.connect("mongodb://127.0.0.1:27017/Blogs-App");
+    console.log("DB connected successfully!");
+  } catch (error) {
+    console.log("DB failed to connect", error);
+  }
+}
+
+main();
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -17,6 +32,9 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.render("pages/home.ejs");
 });
+
+//routers
+app.use("/", userRouter);
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
