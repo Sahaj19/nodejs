@@ -33,15 +33,15 @@ app.use(cookieParser());
 
 // Creating Cookies
 app.get('/create-cookies', (req, res) => {
-    res.cookie("name" , "sahaj");
-	res.send("Cookies created successfully!");
+   res.cookie("name" , "sahaj");
+   res.send("Cookies created successfully!");
 });
 
 // Reading Cookies
 app.get('/get-cookies', (req, res) => {
-    const cookies = req.cookies;
-	console.log(cookies);
-	res.send("Cookies read successfully!");
+   const cookies = req.cookies;
+   console.log(cookies);
+   res.send("Cookies read successfully!");
 });
 
 // Server setup
