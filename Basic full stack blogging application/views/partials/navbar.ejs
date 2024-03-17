@@ -1,8 +1,26 @@
 <nav>
   <h1>Blogging-Application</h1>
+
+  <!----------------->
+
+  <% if(currentUser) { %>
+  <h1>Hello, <%= currentUser.fullname %></h1>
+  <%} %>
+
+  <!----------------->
   <a href="/">Home</a>
-  <a href="/">Create Blog</a>
+
+  <!----------------->
+
+  <% if(currentUser) { %>
+  <a href="/newblog">Create Blog</a>
+  <a href="/logout">log out</a>
+  <% } %>
+
+  <!----------------->
+
+  <% if(!currentUser) { %>
   <a href="/signup">sign up</a>
   <a href="/login">log in</a>
-  <a href="/logout">log out</a>
+  <% } %>
 </nav>
