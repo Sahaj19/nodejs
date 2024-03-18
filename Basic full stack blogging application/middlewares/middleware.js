@@ -37,7 +37,7 @@ function currentUser(req, res, next) {
       } else {
         const user = await User.findById(decodedToken.id);
         res.locals.currentUser = user;
-        console.log(user);
+        // console.log(user);
         next();
       }
     });

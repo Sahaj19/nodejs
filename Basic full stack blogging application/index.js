@@ -5,7 +5,9 @@ const app = express();
 const path = require("path");
 const ejsMate = require("ejs-mate");
 const mongoose = require("mongoose");
+const Blog = require("./models/blog.js");
 const userRouter = require("./routes/user.js");
+const blogRouter = require("./routes/blog.js");
 const cookieParser = require("cookie-parser");
 const { isLoggedIn, currentUser } = require("./middlewares/middleware.js");
 const port = 3000;
@@ -36,16 +38,19 @@ app.use(cookieParser());
 
 app.use(currentUser);
 
-app.get("/", (req, res) => {
-  res.render("pages/home.ejs");
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//(home page)
+
+app.get("/", async (req, res) => {
+  const all_blogs = await Blog.find({});
+  res.render("pages/home.ejs", { all_blogs });
 });
 
-app.get("/newblog", isLoggedIn, (req, res) => {
-  res.render("pages/new.ejs");
-});
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//(routers)
 
-//routers
 app.use("/", userRouter);
+app.use("/blogs", blogRouter);
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

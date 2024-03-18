@@ -1,4 +1,12 @@
 <% layout("boilerplate/boilerplate.ejs") %>
 
 <!----------------------------------------------------->
-<h1>Home page</h1>
+<div class="home_page_div">
+  <% all_blogs.forEach((blog) => { %>
+  <div class="particular_blog_div">
+    <img src="<%= blog.coverImg %>" />
+    <p><strong>Title : </strong><%= blog.title %></p>
+    <a href="/blogs/<%= blog._id %>">View full blog</a>
+  </div>
+  <% }) %>
+</div>
