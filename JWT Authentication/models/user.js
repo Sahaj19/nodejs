@@ -8,7 +8,7 @@ const userSchema = new Schema({
   email: {
     type: String,
     lowercase: true,
-    unique: true,
+    unique: true, //error.code -> 11000
     validate: [isEmail, "Email is not valid, Please enter a valid email!"],
     required: [true, "Email is required!"],
   },

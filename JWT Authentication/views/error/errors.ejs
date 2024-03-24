@@ -1,0 +1,13 @@
+<% layout("boilerplate/boilerplate.ejs") %>
+
+<!--------------------------------------------------------->
+<div class="error_div">
+  <% if(errorObject.email) { %>
+  <p><strong>Email Error : </strong><%= errorObject.email %></p>
+  <% } %>
+
+  <!-------------->
+  <% if(errorObject.password) { %>
+  <p><strong>Password Error : </strong><%= errorObject.password %></p>
+  <% } %>
+</div>

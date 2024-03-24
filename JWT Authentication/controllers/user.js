@@ -1,4 +1,5 @@
 const User = require("../models/user.js");
+const { errorHandler } = require("../middlewares/errorHandler.js");
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -8,7 +9,17 @@ function signup_get(req, res) {
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-function signup_post(req, res) {}
+async function signup_post(req, res) {
+  try {
+    const { email, password } = req.body;
+    const newUser = new User({ email, password });
+    await newUser.save();
+    res.send(newUser);
+  } catch (error) {
+    let errorObject = errorHandler(error);
+    res.render("error/errors.ejs", { errorObject });
+  }
+}
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

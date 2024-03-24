@@ -147,3 +147,17 @@ header .btn {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+
+
+.error_div {
+  background-color: #444;
+  border-radius: 10px;
+  max-width: 1200px;
+  color: #fee996;
+  padding: 1rem;
+  margin: 3rem auto;
+}
+
+.error_div p {
+  font-size: 1.75rem;
+}
