@@ -7,7 +7,7 @@
 google analytics.
 - When a request is sent to our server, we can create a cookie in that moment in time and we can decide at that point what data the cookie will hold as well as things like how long the cookie should last inside the browser before it expires and it automatically deleted.
 - So the cookie is then sent back to the browser in the server response and the browser registers it, so now that cookie is storing data inside the user's browser.
-- Now, every request the browser makes thereafter to the server , it sends whatever cookies we store to the server with that request. and on the server we can access it.
+- Now, every request the browser makes thereafter to the server , it sends whatever cookies we store to the client with that request, and on the server we can access it.
 - So this process is the backbone of how we will be authenticating users whereby this cookie holds a JWT to identify a user and when the server sees that they can verify and authenticate them.
 
 ## Cookies Options
