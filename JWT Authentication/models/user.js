@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const { isEmail } = require("validator");
+const bcrypt = require("bcrypt");
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -17,6 +18,18 @@ const userSchema = new Schema({
     minlength: [6, "Minimum Password length should be 6 characters!"],
     required: [true, "Password is required!"],
   },
+});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//(mongoose pre-save hook)
+userSchema.pre("save", async function (next) {
+  /* 
+  console.log(this); 
+  this here refers to the document being saved.
+  */
+  let salt = await bcrypt.genSalt();
+  this.password = await bcrypt.hash(this.password, salt);
+  next();
 });
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
