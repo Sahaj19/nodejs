@@ -8,6 +8,7 @@ const ejsMate = require("ejs-mate");
 const userRouter = require("./routes/user.js");
 const cookieParser = require("cookie-parser");
 const { isLoggedIn } = require("./middlewares/authentication.js");
+const { isOwner } = require("./middlewares/authorization.js");
 const port = 3000;
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -34,6 +35,8 @@ app.use(cookieParser());
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //(routes)
+
+app.use(isOwner);
 
 app.get("/", (req, res) => {
   res.render("pages/home.ejs");

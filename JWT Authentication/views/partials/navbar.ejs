@@ -1,8 +1,16 @@
 <nav>
   <h1><a href="/">Toy Story</a></h1>
   <ul>
+    <% if(user) { %>
+    <h3>Hello, <%= user.email %></h3>
     <li><a href="/logout">Log out</a></li>
+    <% } %>
+
+    <!--------------------->
+
+    <% if(!user) { %>
     <li><a href="/login">Log in</a></li>
     <li><a href="/signup" class="btn">Sign up</a></li>
+    <% } %>
   </ul>
 </nav>

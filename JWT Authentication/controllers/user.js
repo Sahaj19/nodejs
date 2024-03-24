@@ -48,10 +48,8 @@ async function login_post(req, res) {
   try {
     const { email, password } = req.body;
     let required_user = await User.findOne({ email });
-    console.log(required_user);
     if (required_user) {
       let Auth = await bcrypt.compare(password, required_user.password);
-      console.log(Auth);
       if (Auth) {
         /* jwt generation  */
         let jwt_token = generateToken(required_user._id);
